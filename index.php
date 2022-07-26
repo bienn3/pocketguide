@@ -1,6 +1,6 @@
 <?php
 
-	echo "Hello";
+ echo "Hello mf"
  include('settings.php');
 
  session_start();
