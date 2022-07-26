@@ -1,4 +1,6 @@
 <?php
+
+	echo "Hello";
  include('settings.php');
 
  session_start();
@@ -9,6 +11,5 @@
    include('authentication/login.php');
  }
  
-	echo "hello";
-?>
 	
+?>
