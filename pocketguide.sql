@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2022 at 06:39 AM
+-- Generation Time: Aug 02, 2022 at 07:12 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_annoucements`
+-- Table structure for table `tbl_announcements`
 --
 
-CREATE TABLE `tbl_annoucements` (
+CREATE TABLE `tbl_announcements` (
   `a_id` int(100) NOT NULL,
   `date_posted` varchar(100) NOT NULL,
   `a_author` varchar(100) NOT NULL,
@@ -36,11 +36,13 @@ CREATE TABLE `tbl_annoucements` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_annoucements`
+-- Dumping data for table `tbl_announcements`
 --
 
-INSERT INTO `tbl_annoucements` (`a_id`, `date_posted`, `a_author`, `a_subject`, `a_content`) VALUES
-(1, '2022-07-26T03:39:37+00:00', '1', 'Typhoon warning', 'No classes');
+INSERT INTO `tbl_announcements` (`a_id`, `date_posted`, `a_author`, `a_subject`, `a_content`) VALUES
+(1, '2022-07-26T03:39:37+00:00', '1', 'Typhoon warning', 'No classes'),
+(0, '08/02/2022', 'Bienne', 'Typhoon Warning', '1'),
+(0, '08/02/2022', 'Bienne', 'Watermelon', 'Lemon Iced');
 
 -- --------------------------------------------------------
 
@@ -62,17 +64,12 @@ CREATE TABLE `user_accounts` (
 
 INSERT INTO `user_accounts` (`uid`, `email`, `fullname`, `password`, `user_type`) VALUES
 (1, 'bahbaron@donbosco.edu.ph', 'Bienne Andrew H. Baron', 'watermelon', '1'),
-(2, 'byenandru@yahoo.com', 'Im Nayeon', 'watermelon', '1');
+(2, 'byenandru@yahoo.com', 'Im Nayeon', 'watermelon', '1'),
+(3, 'byenandru@yahoo.com', 'Kim Dami', 'watermelon', '1');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `tbl_annoucements`
---
-ALTER TABLE `tbl_annoucements`
-  ADD PRIMARY KEY (`a_id`);
 
 --
 -- Indexes for table `user_accounts`
@@ -85,16 +82,10 @@ ALTER TABLE `user_accounts`
 --
 
 --
--- AUTO_INCREMENT for table `tbl_annoucements`
---
-ALTER TABLE `tbl_annoucements`
-  MODIFY `a_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `user_accounts`
 --
 ALTER TABLE `user_accounts`
-  MODIFY `uid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
